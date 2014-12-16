@@ -5,8 +5,7 @@ define([
     'common/utils/$',
     'common/modules/userPrefs',
     'helpers/fixtures',
-    'text!fixtures/commercial/slice-adverts.html',
-    'jasq'
+    'text!fixtures/commercial/slice-adverts.html'
 ], function (
     bonzo,
     qwery,
