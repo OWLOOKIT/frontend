@@ -40,7 +40,7 @@
         <select data-bind="options: $root.fronts, value: front, optionsCaption: 'choose a front...'"></select>
     </div>
 
-    <div class="col__inner scrollable" data-bind="foreach: collections">
-        <collection-widget params="context: $context"></collection-widget>
+    <div class="col__inner scrollable collection-container" data-bind="foreach: collections">
+        <collection-widget params="context: $context" data-bind="ownerClass: $data"></collection-widget>
     </div>
 </div>

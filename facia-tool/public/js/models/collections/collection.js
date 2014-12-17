@@ -196,10 +196,35 @@ define([
             self.collectionMeta.updatedBy(raw.updatedEmail === config.email ? 'you' : raw.updatedBy);
 
             self.state.timeAgo(self.getTimeAgo(raw.lastUpdated));
+
+            setTimeout(function () {
+                var top = self.OWN.querySelector('.article-group').getBoundingClientRect().top;
+                var bottomPC = self.OWN.querySelectorAll('.article')[Math.floor(Math.random() * self.OWN.querySelectorAll('.article').length)];
+                var bottomSP = self.OWN.querySelectorAll('.article')[Math.floor(Math.random() * self.OWN.querySelectorAll('.article').length)];
+
+                var heightPC = 0;
+                var heightSP = 0;
+
+                if (bottomPC) {
+                    heightPC = bottomPC.getBoundingClientRect().bottom - top - 15;
+                }
+                if (bottomSP) {
+                    heightSP = bottomSP.getBoundingClientRect().bottom - top - 15;
+                }
+                console.log(top, heightPC, heightSP);
+
+                self.OWN.querySelector('.desktop-indicator .indicator').style.height = heightPC + 'px';
+                self.OWN.querySelector('.mobile-indicator .indicator').style.height = heightSP + 'px';
+
+            }, 500);
         })
         .always(function() {
             self.setPending(false);
         });
+    };
+
+    Collection.prototype.registerElement = function (element) {
+        this.OWN = element;
     };
 
     Collection.prototype.hasOpenArticles = function() {

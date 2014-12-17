@@ -34,7 +34,6 @@
     "commit": "694c8cc4b7e5c6ab1948c8bece74d6dd8c140b12"
   },
   "_source": "git://github.com/Wolfy87/EventEmitter.git",
-  "_target": "~4.2.10",
-  "_originalSource": "eventEmitter",
-  "_direct": true
+  "_target": "4.2.10",
+  "_originalSource": "eventEmitter"
 }
