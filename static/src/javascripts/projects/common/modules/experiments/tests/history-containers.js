@@ -11,8 +11,8 @@ define([
         this.expiry = '2015-02-01';
         this.author = 'Sébastien Cevey';
         this.description = 'Test the value of personalised containers based on history';
-        this.audience = 0;
-        this.audienceOffset = 0;
+        this.audience = 0.01;
+        this.audienceOffset = 0.5;
         this.successMeasure = 'Click-through to content in the personalised containers';
         this.audienceCriteria = 'All users';
         this.dataLinkNames = 'history containers';
